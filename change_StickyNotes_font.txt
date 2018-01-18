@@ -1,0 +1,65 @@
+Here is the original post which can be found at:
+https://social.technet.microsoft.com/Forums/lync/en-US/a75ad434-fc85-4840-8798-f2205cc026d4/how-to-change-sticky-note-font?forum=w7itproui
+
+I'm storing it in case that post is ever removed.
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+Additional steps to take before and after:
+
+You'll want to change the permissions back to exactly how you had them.
+When you attempt to take ownership of the StikyNot.exe.mui file, take screenshots of the permissions settings.
+There should be 5 users, 4 of which have "Read & Execute" and "Read" permissions only.
+The 5th user is "TrustedInstaller" and it has all permissions checked except "Special permissions".
+
+To give ownership back to TrustedInstaller, type "NT SERVICE\TrustedInstaller" into
+the "Enter the object name to select (examples):" box on the "Select User or Group" window.
+This is probably important, but I don't actually know (I didn't bother checking).
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+Now there's no need to
+Delete any default font of Windows OS.
+OR
+Make any Registry Changes,
+(which may affect the Windows working environment)
+
+Follow these simply difficult steps and you can do magic ;-)
+
+You can also download a .MUI editor (even notepad works, I did Notepad++) and modify the sticky notes .mui file and change the font to whatever you want.
+
+Open this location "C:\Windows\System32\en-US"
+Find: "StikyNot.exe.mui"
+Take backup of this file (copy and paste it in this folder itself to be on safer side)
+With it, I could successfully change the default font the sticky notes are using. Use Notepad to edit the .mui file and make changes.
+
+In the Notepad, Find and Replace "Segoe Print" with the Font of your Choice.
+
+
+Solve the Access Denied problem
+
+You have to have administrative permissions on the .mui file, and take control of the file first and then add full access permissions for your user name.
+
+Step by step:
+
+- Right click the file -> properties
+- Security tab -> Advanced
+- Owner tab -> Edit
+- Click your user name -> OK
+- Permissions tab -> Change permissions
+- Add...
+- Enter your user name (OR click advanced to search for it OR select Users) -> OK
+- Click the Top left check box (Allow > Full access) -> OK
+- OK -> OK -> OK that's it, now you can access the file.
+Then you can remove the write protection but you still can't overwrite the file because notepad doesn't let you save in that folder. 
+So save the edited MUI file elsewhere and copy it into the "..\en-us" folder.
+
+Also note that the "..\en-us" folder depends on your system language (e.g. "..\de-de" for german etc), but the filename itself always stays StikyNot.exe.mui.
+
+Thanks
+
+Edited by Jeet Sharma Sunday, July 27, 2014 8:43 PM update
+Proposed as answer by enachi Monday, August 18, 2014 3:40 PM
+Sunday, July 27, 2014 8:41 PM
+
+- Jeet Sharma
