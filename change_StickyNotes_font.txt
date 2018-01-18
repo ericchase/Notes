@@ -5,6 +5,9 @@ I'm storing it in case that post is ever removed.
 
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
+WARNING: Do not use notepad to edit the file, as notepad will destroy some of the binary code resulting in a broken Sticky Notes app.
+You'll need to find an actual binary editor. It's annoying and difficult, but it's the only way to get it right.
+
 Additional steps to take before and after:
 
 You'll want to change the permissions back to exactly how you had them.
