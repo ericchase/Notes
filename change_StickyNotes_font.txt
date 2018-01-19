@@ -5,15 +5,16 @@ I'm storing it in case that post is ever removed.
 
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
-WARNING: Do not use notepad to edit the file, as notepad will destroy some of the binary code resulting in a broken Sticky Notes app.
-You'll need to find an actual binary editor. It's annoying and difficult, but it's the only way to get it right.
+WARNING: Do not use notepad to edit the file, as notepad will destroy some of the binary code
+resulting in a broken Sticky Notes app. You'll need to find an actual binary editor. It's annoying
+and difficult, but it's the only way to get it right.
 
 Additional steps to take before and after:
 
-You'll want to change the permissions back to exactly how you had them.
-When you attempt to take ownership of the StikyNot.exe.mui file, take screenshots of the permissions settings.
-There should be 5 users, 4 of which have "Read & Execute" and "Read" permissions only.
-The 5th user is "TrustedInstaller" and it has all permissions checked except "Special permissions".
+You'll want to change the permissions back to exactly how you had them. When you attempt to take
+ownership of the StikyNot.exe.mui file, take screenshots of the permissions settings. There should
+be 5 users, 4 of which have "Read & Execute" and "Read" permissions only. The 5th user is
+"TrustedInstaller" and it has all permissions checked except "Special permissions".
 
 To give ownership back to TrustedInstaller, type "NT SERVICE\TrustedInstaller" into
 the "Enter the object name to select (examples):" box on the "Select User or Group" window.
@@ -29,19 +30,22 @@ Make any Registry Changes,
 
 Follow these simply difficult steps and you can do magic ;-)
 
-You can also download a .MUI editor (even notepad works, I did Notepad++) and modify the sticky notes .mui file and change the font to whatever you want.
+You can also download a .MUI editor (even notepad works, I did Notepad++) and modify the sticky
+notes .mui file and change the font to whatever you want.
 
 Open this location "C:\Windows\System32\en-US"
 Find: "StikyNot.exe.mui"
 Take backup of this file (copy and paste it in this folder itself to be on safer side)
-With it, I could successfully change the default font the sticky notes are using. Use Notepad to edit the .mui file and make changes.
+With it, I could successfully change the default font the sticky notes are using.
+Use Notepad to edit the .mui file and make changes.
 
 In the Notepad, Find and Replace "Segoe Print" with the Font of your Choice.
 
 
 Solve the Access Denied problem
 
-You have to have administrative permissions on the .mui file, and take control of the file first and then add full access permissions for your user name.
+You have to have administrative permissions on the .mui file, and take control of the file first
+and then add full access permissions for your user name.
 
 Step by step:
 
@@ -54,10 +58,12 @@ Step by step:
 - Enter your user name (OR click advanced to search for it OR select Users) -> OK
 - Click the Top left check box (Allow > Full access) -> OK
 - OK -> OK -> OK that's it, now you can access the file.
-Then you can remove the write protection but you still can't overwrite the file because notepad doesn't let you save in that folder. 
+Then you can remove the write protection but you still can't overwrite the file because notepad
+doesn't let you save in that folder. 
 So save the edited MUI file elsewhere and copy it into the "..\en-us" folder.
 
-Also note that the "..\en-us" folder depends on your system language (e.g. "..\de-de" for german etc), but the filename itself always stays StikyNot.exe.mui.
+Also note that the "..\en-us" folder depends on your system language (e.g. "..\de-de" for german etc),
+but the filename itself always stays StikyNot.exe.mui.
 
 Thanks
 
