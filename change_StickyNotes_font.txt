@@ -1,3 +1,8 @@
+These instructions refer to the Windows' Sticky Notes desktop application.
+
+
+
+
 Here is the original post which can be found at:
 https://social.technet.microsoft.com/Forums/lync/en-US/a75ad434-fc85-4840-8798-f2205cc026d4/how-to-change-sticky-note-font?forum=w7itproui
 
